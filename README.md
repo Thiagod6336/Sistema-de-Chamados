@@ -3,7 +3,8 @@ Descrição Geral
 O projeto é um sistema de gerenciamento de chamados com interface web. Ele foi projetado para facilitar a comunicação entre setores e auxiliar na solução de problemas.
 
 Estrutura do Código
-HTML
+ 
+ HTML
 Arquivo Principal: index.html
 Elementos principais:
 Header: Contém o título e o menu de navegação.
@@ -11,10 +12,12 @@ Main: Contém duas seções principais:
 Criar Novo Chamado: Formulário para adicionar chamados.
 Listar Chamados: Área dinâmica para exibir os chamados registrados.
 Footer: Informações sobre direitos autorais.
-CSS
+
+ CSS
 O estilo principal é definido em ./assets/css/style.css.
 Ícones adicionais são carregados de um CDN do Font Awesome.
-JavaScript
+
+ JavaScript
 O script principal, ./assets/js/index.js, gerencia as interações dinâmicas e o comportamento do sistema.
 É carregado de forma assíncrona com o atributo defer para melhorar o desempenho.
 Estrutura das Funcionalidades
@@ -57,9 +60,5 @@ Use os botões de categoria na área "Listar Chamados" para filtrar por tipo de 
 Navegue pela lista dinâmica exibida.
 Navegar Entre Páginas:
 
-Utilize o menu na parte superior para acessar as páginas específicas.
-Sugestões para Melhorias
-Validação de Formulário: Implementar mensagens de erro personalizadas.
-Persistência de Dados: Integrar com uma API ou banco de dados para armazenar os chamados.
-Estilo Responsivo: Melhorar o design para dispositivos móveis.
-Se precisar de mais informações ou quiser expandir as funcionalidades, posso ajudar a criar um plano!
+Servidor e comunicação
+O back-end foi criado utilizando node.js e o banco de dados em formato json (utilizado por gerir poucos dados). E o meio de comunicação foi api/rest.
