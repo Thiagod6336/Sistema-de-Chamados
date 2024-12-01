@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titulo -->
+    <title>Sistema de Chamados</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Chamados</h1>
+        <h3>Facilitando a Solução de Problemas e a Comunicação</h3>
+            <menu>
+                <a href="index.html">Home</a>
+                <a href="pages/lista_chamados.html">Lista de chamados</a>
+                <a href="./pages/cadastro_chamado.html">Criar chamado</a>
+            </menu>
+    </header>
+
+    <main>
+        <!-- Seção para criação de novos chamados -->
+        <section id="novo-chamado" class="card">
+            <h2>Criar Novo Chamado</h2>
+            <form id="chamado-form" aria-labelledby="novo-chamado">
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria" required aria-label="Selecione a categoria do chamado">
+                    <option value="TI">TI</option>
+                    <option value="Manutenção">Manutenção</option>
+                    <option value="RH">RH</option>
+                </select>
+
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ex.: Computador não liga" required aria-label="Título do chamado">
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" placeholder="Descreva o problema detalhadamente" required aria-label="Descrição do problema"></textarea>
+
+                <button type="submit">Adicionar Chamado</button>
+            </form>
+        </section>
+
+        <!-- Seção para listar os chamados -->
+         <!-- Menu de Categorias -->
+         <nav id="menu-categorias">
+            <button data-categoria="todos" class="item-menu">Todos</button>
+            <button data-categoria="TI" class="item-menu">TI</button>
+            <button data-categoria="Manutenção" class="item-menu">Manutenção</button>
+            <button data-categoria="RH" class="item-menu">RH</button>
+        </nav>
+        <section class="card">
+           <section id="lista-chamados" class="chamados-lista">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Desenvolvido por Thiago Tartuliano.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="./assets/js/index.js" defer></script>
+</body>
+</html>
