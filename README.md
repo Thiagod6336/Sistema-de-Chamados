@@ -1,64 +1,54 @@
-Documentação Técnica
-Descrição Geral
-O projeto é um sistema de gerenciamento de chamados com interface web. Ele foi projetado para facilitar a comunicação entre setores e auxiliar na solução de problemas.
+Documentação Projeto Sistem de chamados
 
-Estrutura do Código
- 
- HTML
-Arquivo Principal: index.html
-Elementos principais:
-Header: Contém o título e o menu de navegação.
-Main: Contém duas seções principais:
-Criar Novo Chamado: Formulário para adicionar chamados.
-Listar Chamados: Área dinâmica para exibir os chamados registrados.
-Footer: Informações sobre direitos autorais.
+Este documento descreve a implementação de um sistema de chamados simples utilizando tecnologias web modernas. O sistema foi desenvolvido para permitir a criação e o gerenciamento de chamados de forma eficiente e intuitiva.
 
- CSS
-O estilo principal é definido em ./assets/css/style.css.
-Ícones adicionais são carregados de um CDN do Font Awesome.
+Características principais:
+Frontend: Desenvolvido com HTML, CSS e JavaScript, garantindo uma interface limpa e responsiva.
+Backend: Implementado com Node.js, utilizando APIs REST para comunicação eficiente entre cliente e servidor.
+Banco de Dados: Um arquivo JSON foi utilizado para armazenar os dados dos chamados, adequado para cenários com baixo volume de informações.
+Descrição do Sistema
 
- JavaScript
-O script principal, ./assets/js/index.js, gerencia as interações dinâmicas e o comportamento do sistema.
-É carregado de forma assíncrona com o atributo defer para melhorar o desempenho.
-Estrutura das Funcionalidades
-Criar Chamados:
+1. Funcionalidades Principais
+Criação de Chamados:
+Um formulário simples permite que os usuários registrem novos chamados, preenchendo informações básicas como título, descrição e prioridade.
 
-Um formulário com os seguintes campos:
-Categoria: Menu suspenso com opções como "TI", "Manutenção", e "RH".
-Título: Campo de texto para o resumo do problema.
-Descrição: Área de texto para detalhar o problema.
-Botão para enviar o formulário e adicionar o chamado.
-Listar Chamados:
+Exibição de Chamados:
+Os chamados criados são exibidos em uma lista dinâmica, atualizada em tempo real.
 
-Botões de filtro por categorias, como "TI", "Manutenção" e "RH".
-Uma área para exibir a lista de chamados, gerenciada dinamicamente pelo JavaScript.
-Navegação:
+2. Estrutura do Projeto
+Frontend:
+HTML: Estrutura básica da página, incluindo o formulário de entrada e a lista de exibição.
+CSS: Estilo visual responsivo e atraente, garantindo usabilidade.
+JavaScript: Scripts para interação do usuário, validação de formulário e comunicação com o backend via chamadas AJAX.
+Backend:
+Node.js:
 
-Menu com links para:
-Página inicial (index.html).
-Lista de chamados (pages/lista_chamados.html).
-Cadastro de novos chamados (pages/cadastro_chamado.html).
-Guia do Usuário
-Requisitos
-Navegador compatível com HTML5, CSS3 e JavaScript.
-Conexão com a internet para carregar o Font Awesome.
-Instruções de Uso
-Acessar o Sistema:
+Servidor HTTP configurado para lidar com requisições e fornecer os dados necessários para o frontend.
+APIs RESTful implementadas para manipulação de dados (GET, POST, PUT e DELETE).
+JSON como Banco de Dados:
 
-Abra o arquivo index.html em um navegador.
-Criar um Chamado:
+Arquivo JSON para persistência de dados.
+Adequado para aplicações de pequeno porte com baixa complexidade de dados.
+3. Comunicação Cliente-Servidor
+API REST:
+GET: Recuperar lista de chamados.
+POST: Criar um novo chamado.
+PUT: Atualizar informações de um chamado.
+DELETE: Excluir um chamado.
+4. Fluxo de Uso
+Usuário acessa o sistema e visualiza os chamados existentes na lista.
 
-Vá até a seção "Criar Novo Chamado".
-Preencha os campos obrigatórios:
-Categoria.
-Título do problema.
-Descrição detalhada.
-Clique em "Adicionar Chamado".
-Visualizar Chamados:
+Novo chamado:
+O usuário preenche o formulário com os detalhes do chamado.
+O frontend envia os dados via POST para o servidor.
+O backend grava os dados no arquivo JSON e retorna a lista atualizada.
+Edição ou exclusão de chamados:
 
-Use os botões de categoria na área "Listar Chamados" para filtrar por tipo de chamado.
-Navegue pela lista dinâmica exibida.
-Navegar Entre Páginas:
+Ações realizadas diretamente na lista com opções disponíveis em cada item.
+Exibição em tempo real:
 
-Servidor e comunicação
-O back-end foi criado utilizando node.js e o banco de dados em formato json (utilizado por gerir poucos dados). E o meio de comunicação foi api/rest.
+A lista é atualizada dinamicamente sem recarregar a página.
+5. Benefícios do Sistema
+Simplicidade: Estrutura leve e fácil de usar.
+Escalabilidade: Pode ser adaptado para um banco de dados mais robusto, como MySQL ou MongoDB, conforme a necessidade.
+Agilidade no desenvolvimento: Uso de tecnologias bem estabelecidas e integradas.
